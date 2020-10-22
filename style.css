@@ -1,0 +1,91 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+
+.sky,
+.grass,
+.road {
+	position: relative;
+}
+
+.sky {
+    border-top: 20px solid skyblue;
+    background: skyblue url(img/cloud3.png) repeat-x 0;
+    background-size: 20%;
+	height: 40%;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	padding-top: 120px;
+    box-sizing: border-box;
+    -webkit-animation: slide 60s linear infinite;
+}
+
+.sky h1 {
+  font-family: sans-serif;
+}
+
+.grass {
+	background: green;
+	height: 30%;
+}
+
+.road {
+	background: dimgrey;
+	height: 30%;
+	box-sizing: border-box;
+	border-top: 10px solid grey;
+	border-bottom: 10px solid grey;
+	width: 100%;
+}
+
+.lines {
+	box-sizing: border-box;
+	border: 5px dashed white;
+	height: 0;
+	width: 100%;
+	position: absolute;
+	top: 45%;
+}
+
+img {
+	width: 300px;
+}
+
+.ferrari {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	animation-name: drive;
+	animation-duration: 4s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+
+.porsche {
+	position: absolute;
+	top: 80px;
+	left: 0px;
+	animation-name: drive;
+	animation-duration: 4.4s;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+
+@keyframes drive {
+	from {
+		transform: translateX(-200px);
+	}
+	to {
+		transform: translateX(2200px);
+	}
+}
+
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 0; }
+}
